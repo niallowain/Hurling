@@ -42,3 +42,11 @@ def adj_mat(plays_array):
                 init_mat[row_val,col_val] = int(init_mat[row_val,col_val]) + 1
 
     return init_mat[1:15,1:15]
+
+def weight_out(adj_mat):
+    weight_vec = np.zeros(15)
+    for i in range(0,15):
+            weight_vec[i] = sum(adj_mat[i,])/sum(sum(adj_mat[0:14,]))
+            
+    return weight_vec
+                       
