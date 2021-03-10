@@ -41,4 +41,4 @@ def adj_mat(plays_array):
                 col_val = int(pass_val[1] )
                 init_mat[row_val,col_val] = int(init_mat[row_val,col_val]) + 1
 
-    return init_mat
+    return init_mat[1:15,1:15]
