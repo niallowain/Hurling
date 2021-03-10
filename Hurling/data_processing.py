@@ -28,3 +28,17 @@ def pass_process(passes, exceptions):
             
     
     return plays_array[0:j,0:count]
+
+def adj_mat(plays_array):
+    init_mat = np.zeros((16,16))
+    for i in range(0,int(plays_array.shape[0])-1):
+        for j in range(0,int(plays_array.shape[1])-1):
+            pass_val = [int(plays_array[i,j]),int(plays_array[i,j+1])]
+            if(pass_val[0] == 0):
+                init_mat[i,j] = init_mat[i,j] 
+            else : 
+                row_val = int(pass_val[0] )
+                col_val = int(pass_val[1] )
+                init_mat[row_val,col_val] = int(init_mat[row_val,col_val]) + 1
+
+    return init_mat
